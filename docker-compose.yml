@@ -3,7 +3,7 @@ ngxsysd:
   command:
     - /usr/sbin/init
 
-  container_name: ngxsysd
+  container_name: sysdngx
 
   environment:
     - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin

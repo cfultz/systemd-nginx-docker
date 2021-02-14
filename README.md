@@ -5,3 +5,5 @@ will add more to this area soon
 
 
 this version of nginx.conf uses /var/www as the root directory for the main page. health check will fail unless there is an index file in that directory on host device.
+
+this can be changed in the Dockerfile before building the image locally.
