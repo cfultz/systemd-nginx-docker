@@ -11,7 +11,7 @@ ngxsysd:
 
   hostname: ngxsysd
 
-  image: cfultz/c7sysd:ngxsysd
+  image: cfultz/c7sysd:latest
 
   ipc: private
 
