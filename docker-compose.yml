@@ -1,0 +1,36 @@
+ngxsysd:
+
+  command:
+    - /usr/sbin/init
+
+  container_name: ngxsysd
+
+  environment:
+    - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    - container=docker
+
+  hostname: ngxsysd
+
+  image: cfultz/c7sysd:ngxsysd
+
+  ipc: private
+
+  log_driver: json-file
+
+  labels:
+    - Maintainer="Caleb Fultz <caleb@fultz.dev>"
+
+  ports:
+    - 443:443/tcp
+    - 80:80/tcp
+
+  privileged: true
+
+  security_opt:
+    - label=disable
+
+  volumes:
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    - /var/www:/var/www
+
+  restart: unless-stopped
